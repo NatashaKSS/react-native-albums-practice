@@ -1,7 +1,7 @@
 /* @flow */
-
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
 
 type Props = {
   album: {
@@ -14,9 +14,9 @@ type Props = {
 };
 
 const AlbumDetail = (props: Props) => (
-  <View>
+  <Card>
     <Text>{props.album.title}</Text>
-  </View>
+  </Card>
 );
 
 export default AlbumDetail;
