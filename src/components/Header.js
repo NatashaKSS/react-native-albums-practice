@@ -1,6 +1,20 @@
 /* @flow */
-import * as React from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
+
+type Props = {
+  text: string,
+};
+
+const Header = (props: Props) => {
+  const { viewStyle, textStyle } = styles;
+
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>{props.text}</Text>
+    </View>
+  );
+};
 
 const styles = {
   viewStyle: {
@@ -18,20 +32,6 @@ const styles = {
   textStyle: {
     fontSize: 20,
   },
-};
-
-type Props = {
-  text: string,
-};
-
-const Header = (props: Props) => {
-  const { viewStyle, textStyle } = styles;
-
-  return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>{props.text}</Text>
-    </View>
-  );
 };
 
 export default Header;
