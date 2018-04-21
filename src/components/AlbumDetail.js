@@ -1,7 +1,8 @@
 /* @flow */
-import * as React from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 import Card from './Card';
+import CardSection from './CardSection';
 
 type Props = {
   album: {
@@ -15,7 +16,9 @@ type Props = {
 
 const AlbumDetail = (props: Props) => (
   <Card>
-    <Text>{props.album.title}</Text>
+    <CardSection>
+      <Text>{props.album.title}</Text>
+    </CardSection>
   </Card>
 );
 
