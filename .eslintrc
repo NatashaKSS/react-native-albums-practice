@@ -6,6 +6,10 @@
   },
   rules: {
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'function-paren-newline': ['error', { "minItems": 3 }],
     'global-require': 'off',
   },
+  globals: {
+    "fetch": true
+  }
 }
