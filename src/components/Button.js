@@ -3,16 +3,17 @@ import React, { SyntheticEvent } from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 type Props = {
+  children: mixed,
   onPress: SyntheticEvent,
 };
 
-const Button = ({ onPress }: Props) => {
+const Button = ({ onPress, children }: Props) => {
   const { buttonStyle, textStyle } = styles;
 
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text style={textStyle}>
-        Click me!!
+        {children}
       </Text>
     </TouchableOpacity>
   );

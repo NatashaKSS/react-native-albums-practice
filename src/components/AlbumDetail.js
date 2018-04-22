@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Button from './Button';
 import Card from './Card';
 import CardSection from './CardSection';
@@ -17,7 +17,7 @@ type Props = {
 
 const AlbumDetail = ({ album }: Props) => {
   const {
-    title, artist, image, thumbnail_image: thumbnailImage,
+    title, artist, image, thumbnail_image: thumbnailImage, url,
   } = album;
   const {
     thumbnailStyle, headerContentStyle, headerTextStyle, thumbnailContainerStyle,
@@ -47,7 +47,9 @@ const AlbumDetail = ({ album }: Props) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button onPress={() => Linking.openURL(url)}>
+          Buy Now
+        </Button>
       </CardSection>
     </Card>
   );
