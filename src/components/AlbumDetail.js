@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import { Text, View, Image } from 'react-native';
+import Button from './Button';
 import Card from './Card';
 import CardSection from './CardSection';
 
@@ -37,11 +38,16 @@ const AlbumDetail = ({ album }: Props) => {
           <Text>{artist}</Text>
         </View>
       </CardSection>
+
       <CardSection>
         <Image
           style={imageStyle}
           source={{ uri: image }}
         />
+      </CardSection>
+
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
