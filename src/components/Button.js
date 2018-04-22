@@ -1,11 +1,16 @@
-import React from 'react';
+/* @flow */
+import React, { SyntheticEvent } from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = () => {
+type Props = {
+  onPress: SyntheticEvent,
+};
+
+const Button = ({ onPress }: Props) => {
   const { buttonStyle, textStyle } = styles;
 
   return (
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text style={textStyle}>
         Click me!!
       </Text>
